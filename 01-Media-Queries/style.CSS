@@ -1,0 +1,83 @@
+/* 
+
+Media Queries
+
+Permitten aplicar estilos específicos de acuerdo a las características del dispositivo
+
+Utilizan la regla @media  para condicionar la aplicación de estos estilos
+
+Sintaxix
+
+@media media-type conector ( media-feature-rule) {
+
+Reglas de CSS cuando se cumplen estas condiciones}
+
+Media-type:
+*screen -> pantallas de computadora, tablets o móviles.
+*speech -> Sintetizadores de voz.
+*print -> Para documentos impresos o imprimir la web.
+*All -> Todos los dispositivos. Valor por defecto.
+
+
+Contectors (Conectores)
+and (y) -> Se coloca entre el media-type y el media-feture-rule
+or (ó) -> Se usa una coma para separar media-features}
+not (negación) -> Se coloca antes del media-type
+
+Media-features-rule (Reglas de característica del medio)
+width -> Ancho de la ventana del navegador
+heigth -> Alto de la ventana del navegador
+min-width / max-width -> Ancho mínimo y Ancho máximo del navegador
+min-heigth / max-heigth -> Alto mínimo y Alto máximo
+orientation -> Orientación del dispositivo: portrait o landscape
+resolution -> Densidad de pixeles de la pantalla
+color -> Número de bits por color de la pantalla 
+
+*/
+
+body {
+    color: azure;
+    background-color: black;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Media Queries */
+
+@media screen and (max-width:1024px) {
+    body {
+        color: black;
+        background-color: white;
+    }
+
+    h1 {
+        font-size: 6rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    /* Tantas reglas como necesitemos */
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        color: rgb(255, 170, 0);
+        background-color: rgb(255, 0, 179);
+    }
+    h1 {
+        font-size: 1rem;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        color: rgb(100, 227, 227);
+        background-color: rgb(12, 12, 69);
+    }
+    h1 {
+        font-size: 10rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
