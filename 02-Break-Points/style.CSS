@@ -1,0 +1,125 @@
+/* 
+
+Break Points
+
+Valores específicos de ancho de pantalla para adaptarse mejor a las divisiones del disositivo.
+
+Ayuda a definir los estilos mediante los media queries.
+Generalmente se definen según las categorías comunes de dispositivos.
+
+Dispositivos:
+    Móviles pequeños: de 320px a 479px de ancho de pantalla. 
+    Móviles generales: de 480px a 767px de ancho de pantalla.
+    Tabletas: de 768px a 1023px de ancho de pantalla.
+    Laptops: de 1024px a 1279px de ancho de pantalla.
+    Escritorio: de 1280px a tamaños superiores.
+
+Es recomentable usar los brea points necesarios, generalmente de 3 a para mantener un código manejable.
+
+Los media queries se recomienda escribirlos al final dek código base.
+
+Metodologías de diseño responsivo:
+    1- Movile first (Primero móviles).
+    Primero se establecen los estilos base para pantallas pequeñas. Se usan los mediaqueries con min-width para ir ampliando hacia tamaños más grandes de pantalla.
+
+    1- Desktop first (Primero escritorio). Primero se diseñan y establecen los estilos base para pantallas grandes o de escritorio. Se usan los media queries con max-width para ir reduciendo hacia tamaños más pequeños de pantalla.
+
+*/
+
+/* 
+
+Movile First - Brea Points
+
+Establecemos los estilos base para móviles pequeños de hasta 479px de ancho
+
+*/
+
+body {
+    color: azure;
+    background-color: black;
+}
+
+/*  Estilos para móviles entre 480px y 767px */
+
+@media screen and (min-width: 480px) {
+    body {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+}
+
+/*  Estilos para tablets entre 768px y 1023px */
+
+@media screen and (min-width: 768px) {
+    body {
+    color: rgb(255, 45, 185);
+    background-color: rgb(255, 166, 0);
+}
+} 
+
+/*  Estilos para laptops entre 1024px y 1279px */
+
+@media screen and (min-width: 1024px) {
+    body {
+    color: rgb(255, 208, 37);
+    background-color: rgb(255, 0, 111);
+}
+}
+
+/*  Estilos para escritorio de 1280px para arriba */
+
+@media screen and (min-width: 1280px) {
+     body {
+    color: rgb(37, 204, 255);
+    background-color: rgb(144, 0, 255);
+} 
+}
+
+/*  Desktop First - Break Points
+
+Definir los estilos base para pantallas de escritorio de 1280px y superiores 
+
+*/
+
+h1 {
+    color: rgb(253, 184, 255);
+    font-size: 8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+/*  Estilos de laptop entre 1024px a 1279px */
+
+@media screen and (max-width: 1279px) {
+    h1 {
+        font-size: 6rem;
+        color: blueviolet;
+    }
+}
+
+/*  Estilos de tablet de 768px yb 1023px */
+
+@media screen and (max-width: 1023px) {
+     h1 {
+        font-size: 4rem;
+        color: rgb(43, 226, 180);
+    }
+} 
+
+/*  Estilos de móviles entre 480px a 767px */
+
+@media screen and (max-width: 767px) {
+     h1 {
+        font-size: 2rem;
+        color: rgb(67, 43, 226);
+    } 
+}
+
+/*  Estilos de móviles pequeños menores a 479px */
+
+@media screen and (max-width: 479px) {
+     h1 {
+        font-size: 1rem;
+        color: rgb(0, 75, 88);
+    } 
+} 
